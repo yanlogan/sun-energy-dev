@@ -1,0 +1,47 @@
+footer {
+	padding: 42px 0 60px;
+	font-size: 14px;
+	color: #fff;
+	background-color: #323232;
+
+	section {
+		margin-top: 50px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	aside {
+		padding-top: 30px;
+	}
+
+
+	.footer {
+		&__copyright {
+			color: #9c9c9c;
+			margin-top: 52px;
+		}
+
+		&__title {
+			font-family: 'Rubik Bold';
+		}
+
+		&__address {
+			margin: 30px 0;
+			line-height: 24px;
+		}
+
+		&__email {
+			color: #67bf00;
+
+			.icon-envelope {
+				margin-right: 10px;
+				
+				path {
+					fill: #67bf00;
+				}
+			}
+		}
+	}
+	
+}
