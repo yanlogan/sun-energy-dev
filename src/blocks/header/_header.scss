@@ -1,0 +1,16 @@
+.header-menu {
+	width: 500px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__link {
+		font-family: 'Rubik Medium';
+	}
+
+	&__btn {
+		padding: 13px 26px;
+		border: 2px solid #67bf00;
+		border-radius: 25px;
+	}
+}
