@@ -1,8 +1,9 @@
 .header-top {
 	display: flex;
 	justify-content: space-between;
+
+	padding: 0 25px;
 	color: #fff;
-	background-color: #838383;
 	
 	.header-menu {
 		width: 610px;
@@ -24,7 +25,7 @@
 	
 		&__btn {
 			padding: 10px 20px;
-			border: 2px solid #67bf00;
+			border: 2px solid $accent-color;
 			border-radius: 20px;
 
 			.icon-envelope {

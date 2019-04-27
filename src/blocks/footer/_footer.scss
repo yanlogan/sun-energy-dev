@@ -32,13 +32,13 @@ footer {
 		}
 
 		&__email {
-			color: #67bf00;
+			color: $accent-color;
 
 			.icon-envelope {
 				margin-right: 10px;
 				
 				path {
-					fill: #67bf00;
+					fill: $accent-color;
 				}
 			}
 		}
