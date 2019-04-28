@@ -1,6 +1,6 @@
 .footer {
 
-	padding: 42px 0 60px;
+	padding: 40px 0 60px;
 	font-size: 14px;
 	color: #fff;
 	background-color: $primary-color;
@@ -10,14 +10,19 @@
 	}
 
 	section {
-		margin-top: 50px;
+		margin-top: 30px;
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
 	}
 
 	aside {
 		padding-top: 30px;
+		margin-right: 115px;
+	}
+
+	article {
+		min-width: 290px;
+		margin-right: 90px;
 	}
 
 	&__copyright {
@@ -35,10 +40,13 @@
 	}
 
 	&__email {
+		display: flex;
+		align-items: center;
+
 		color: $accent-color;
 
 		.icon-envelope {
-			margin-right: 10px;
+			margin-right: 15px;
 			
 			path {
 				fill: $accent-color;
