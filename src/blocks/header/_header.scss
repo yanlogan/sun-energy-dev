@@ -2,12 +2,12 @@
 	display: flex;
 	justify-content: space-between;
 
-	padding: 0 25px;
+	padding: 0 20px 0 25px;
 	color: #fff;
 	
 	.header-menu {
-		width: 610px;
-		margin-top: 10px;
+		width: 612px;
+		// margin-top: 10px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -24,12 +24,8 @@
 		}
 	
 		&__btn {
-			padding: 10px 20px;
-			border: 2px solid $accent-color;
-			border-radius: 20px;
-
 			.icon-envelope {
-				margin-right: 10px;
+				margin-right: 8px;
 				
 				path {
 					fill: white;
