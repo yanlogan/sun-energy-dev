@@ -1,5 +1,5 @@
 .partners {
-	padding: 57px 0 66px;
+	padding: 50px 0 65px;
 
 	.section-title {
 		text-align: center;
@@ -20,6 +20,6 @@
 	&__img {
 		width: 100%;
 		min-height: 115px;
-		background: #fff url('/img/partners.png') no-repeat center;
+		background: #fff url('/img/partners.png') no-repeat 10px 0;
 	}
 }
