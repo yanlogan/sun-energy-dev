@@ -17,6 +17,7 @@
 			top: 46%;
 			content: url('/img/arrow.png');
 			transform: rotate(180deg);
+			cursor: pointer;
 		}
 	
 		&:after {
@@ -25,6 +26,7 @@
 			right: 40px;
 			top: 46%;
 			content: url('/img/arrow.png');
+			cursor: pointer;
 		}
 	}
 
