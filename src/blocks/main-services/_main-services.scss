@@ -1,0 +1,128 @@
+.main-services {
+	position: relative;
+	background: #fff url('/img/services-bg.jpg') no-repeat 0 0;
+	background-size: cover;
+	// background-position: 
+
+	&-bg {
+		padding: 40px 0 47px;
+		width: 100%;
+		// min-height: 700px;
+		background-image: linear-gradient(to bottom, rgba(5, 12, 18, .6) 0%, rgba(5, 12, 18, 0.3) 100%);
+
+		&:before {
+			display: none;
+			position: absolute;
+			left: 40px;
+			top: 46%;
+			content: url('/img/arrow.png');
+			transform: rotate(180deg);
+		}
+	
+		&:after {
+			display: block;
+			position: absolute;
+			right: 40px;
+			top: 46%;
+			content: url('/img/arrow.png');
+		}
+	}
+
+	.section-title {
+		text-align: center;
+		color: #fff;
+	}
+
+	&-content {
+		margin-top: 15px;
+	}
+
+	&-tabs {
+		display: flex;
+		justify-content: center;
+
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		font-size: 18px;
+		line-height: 32px;
+
+		li {
+			margin-right: 41px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			a {
+				color: #fff;
+				line-height: 32px;
+				border-bottom: 2px dashed $accent-color;
+			}
+		}
+	}
+
+	&-tabcontent {
+		margin-top: 332px;
+		background-color: rgba(20, 20, 20, .7);
+		border-radius: 4px;
+		
+		&__text {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+
+			padding: 15px 25px 18px;
+			color: #fff;
+
+			div {
+				
+			}
+
+			span {
+				font-family: 'Rubik Bold';
+				font-size: 24px;
+				line-height: 36px;
+			}
+
+			p {
+				max-width: 600px;
+				margin: 0;
+				margin-top: 15px;
+				padding: 0;
+				line-height: 26px;
+			}
+
+			a {
+				color: #fff;
+				font-size: 16px;
+				line-height: 22px;
+				border-bottom: 2px solid $accent-color;
+			}
+		}
+	}
+
+	// &-slides {
+	// 	//TODO
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	box-sizing: border-box;
+	// 	padding: 0 40px;
+
+	// 	display: flex;
+	// 	justify-content: space-between;
+	// 	align-items: center;
+
+	// 	.main-services-slider__btn {
+	// 		width: 38px;
+	// 		height: 71px;
+	// 	}
+
+	// 	.btn-next {
+	// 		background-image: url('/img/arrow.png');
+	// 	}
+	// }
+}
