@@ -2,9 +2,7 @@ var tabs = document.querySelectorAll('.main-services__tab');
 var tabPanels = document.querySelectorAll('.main-services-tabcontent');
 var prevButton = document.querySelector('.main-services-prev');
 var nextButton = document.querySelector('.main-services-next');
-var activeTab = document.querySelector('.main-services__tab_active');
-var activePanel = document.querySelector('.main-services-tabcontent_active');
-var current = 0;
+var currentServiceTab = 0;
 
 const resetTabs = () => {
 	tabs.forEach(node => {
@@ -23,7 +21,7 @@ const addTabClickHandler = (tab, tabPanel, index) => {
 		tab.classList.add('main-services__tab_active');
 		tabPanel.classList.add('main-services-tabcontent_active');
 		tabPanel.style.display = 'block';
-		current = index;
+		currentServiceTab = index;
 	});
 };
 
@@ -40,26 +38,26 @@ showPanel();
 
 const slideNext = () => {
 	resetTabs();
-	tabs[current + 1].classList.add('main-services__tab_active');
-	tabPanels[current + 1].classList.add('main-services-tabcontent_active');
-	tabPanels[current + 1].style.display = 'block';
-	current++;
+	tabs[currentServiceTab + 1].classList.add('main-services__tab_active');
+	tabPanels[currentServiceTab + 1].classList.add('main-services-tabcontent_active');
+	tabPanels[currentServiceTab + 1].style.display = 'block';
+	currentServiceTab++;
 };
 
 const slidePrev = () => {
 	resetTabs();
-	tabs[current - 1].classList.add('main-services__tab_active');
-	tabPanels[current - 1].classList.add('main-services-tabcontent_active');
-	tabPanels[current - 1].style.display = 'block';
-	current--;
+	tabs[currentServiceTab - 1].classList.add('main-services__tab_active');
+	tabPanels[currentServiceTab - 1].classList.add('main-services-tabcontent_active');
+	tabPanels[currentServiceTab - 1].style.display = 'block';
+	currentServiceTab--;
 };
 
 nextButton.addEventListener('click', () => {
-	if (current === tabs.length - 1) current = -1;
+	if (currentServiceTab === tabs.length - 1) currentServiceTab = -1;
 	slideNext();
 });
 
 prevButton.addEventListener('click', () => {
-	if (current === 0) current = tabs.length;
+	if (currentServiceTab === 0) currentServiceTab = tabs.length;
 	slidePrev();
 });
