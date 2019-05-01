@@ -9,25 +9,25 @@
 		width: 100%;
 		// min-height: 700px;
 		background-image: linear-gradient(to bottom, rgba(5, 12, 18, .6) 0%, rgba(5, 12, 18, 0.3) 100%);
+	}
 
-		&:before {
-			display: none;
-			position: absolute;
-			left: 40px;
-			top: 46%;
-			content: url('/img/arrow.png');
-			transform: rotate(180deg);
-			cursor: pointer;
-		}
-	
-		&:after {
-			display: block;
-			position: absolute;
-			right: 40px;
-			top: 46%;
-			content: url('/img/arrow.png');
-			cursor: pointer;
-		}
+	&-prev {
+		display: block;
+		position: absolute;
+		left: 40px;
+		top: 46%;
+		content: url('/img/arrow.png');
+		transform: rotate(180deg);
+		cursor: pointer;
+	}
+
+	&-next {
+		display: block;
+		position: absolute;
+		right: 40px;
+		top: 46%;
+		content: url('/img/arrow.png');
+		cursor: pointer;
 	}
 
 	.section-title {
@@ -55,12 +55,17 @@
 			&:last-child {
 				margin-right: 0;
 			}
+		}
+	}
 
-			a {
-				color: #fff;
-				line-height: 32px;
-				border-bottom: 2px dashed $accent-color;
-			}
+	&__tab {
+		color: #fff;
+		line-height: 32px;
+		border-bottom: 2px dashed $accent-color;
+
+		&_active {
+			color: rgba(255,255,255, .6);
+			border-bottom: none;
 		}
 	}
 
@@ -68,6 +73,7 @@
 		margin-top: 332px;
 		background-color: rgba(20, 20, 20, .7);
 		border-radius: 4px;
+		display: none;
 		
 		&__text {
 			display: flex;
@@ -76,10 +82,6 @@
 
 			padding: 15px 25px 18px;
 			color: #fff;
-
-			div {
-				
-			}
 
 			span {
 				font-family: 'Rubik Bold';
@@ -102,29 +104,6 @@
 				border-bottom: 2px solid $accent-color;
 			}
 		}
+
 	}
-
-	// &-slides {
-	// 	//TODO
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	box-sizing: border-box;
-	// 	padding: 0 40px;
-
-	// 	display: flex;
-	// 	justify-content: space-between;
-	// 	align-items: center;
-
-	// 	.main-services-slider__btn {
-	// 		width: 38px;
-	// 		height: 71px;
-	// 	}
-
-	// 	.btn-next {
-	// 		background-image: url('/img/arrow.png');
-	// 	}
-	// }
 }
