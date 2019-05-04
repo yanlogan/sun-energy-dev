@@ -7,23 +7,20 @@ import "../../../node_modules/bootstrap/js/dist/carousel.js";
 $(document).ready( function() {
 
 	var clickEvent = false;
-	$('#servicesCarousel')
-		// .carousel({
-		// 	interval: false
-		// })
-		.on('click', '.nav a', function() {
-				clickEvent = true;
-				$('.nav a').removeClass('main-services__tab_active');
-				$(this).addClass('main-services__tab_active');		
+	$("#servicesCarousel")
+		.on("click", ".main-services-tabs.nav a", function() {
+			clickEvent = true;
+			$(".nav a").removeClass("main-services__tab_active");
+			$(this).addClass("main-services__tab_active");		
 		})
-		.on('slid.bs.carousel', function(e) {
+		.on("slid.bs.carousel", function() {
 			if(!clickEvent) {
-				var count = $('.nav').children().length -1;
-				var current = $('.nav a.main-services__tab_active');
-				current.removeClass('main-services__tab_active').parent().next().children().addClass('main-services__tab_active');
-				var id = parseInt(current.parent().data('slide-to'));
+				var count = $(".main-services-tabs.nav").children().length -1;
+				var current = $(".main-services-tabs.nav a.main-services__tab_active");
+				current.removeClass("main-services__tab_active").parent().next().children().addClass("main-services__tab_active");
+				var id = parseInt(current.parent().data("slideTo"));
 				if(count == id) {
-					$('.nav a').first().addClass('main-services__tab_active');	
+					$(".main-services-tabs.nav a").first().addClass("main-services__tab_active");	
 				}
 			}
 			clickEvent = false;

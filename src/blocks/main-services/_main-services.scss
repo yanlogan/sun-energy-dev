@@ -63,19 +63,9 @@
 		line-height: 32px;
 		border-bottom: 2px dashed $accent-color;
 
-		&:hover {
-			color: #fff;
-			text-decoration: none;
-		}
-
 		&_active {
 			color: rgba(255,255,255, .6);
 			border-bottom: none;
-
-			&:hover {
-				color: rgba(255,255,255, .6);
-				text-decoration: none;
-			}	
 		}
 	}
 

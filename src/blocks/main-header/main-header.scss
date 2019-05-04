@@ -15,7 +15,8 @@
 		background-color: rgba(20, 20, 20, .8);
 
 		&__slide {
-			display: none;
+			position: relative;
+			min-height: 127px;
 		}
 		
 		&__text {
@@ -34,6 +35,9 @@
 			}
 
 			a {
+				position: absolute;
+				right: 10px;
+				bottom: 30px;
 				color: #fff;
 				font-size: 16px;
 				line-height: 22px;
@@ -41,23 +45,23 @@
 			}
 		}
 
-		// .header-slides {
-		// 	display: flex;
-		// 	justify-content: space-between;
+		.header-slides {
+			display: flex;
+			justify-content: space-between;
 
-		// 	.header-slider__btn {
-		// 		width: 238px;
-		// 		height: 4px;
-		// 		background-color: #fff;
-		// 		opacity: .7;
-		// 		cursor: pointer;
+			.header-slider__btn {
+				width: 238px;
+				height: 4px;
+				background-color: #fff;
+				opacity: .7;
+				cursor: pointer;
 
-		// 		&_active {
-		// 			background-color: $accent-color;
-		// 		}
-		// 	}
+				&_active {
+					background-color: $accent-color;
+				}
+			}
 			
-		// }
+		}
 
 		.header-slides {
 			display: flex;

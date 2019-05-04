@@ -1,46 +1,27 @@
 import "../../../node_modules/jquery/dist/jquery.min.js";
 import $ from "jquery";
-// import "../../../node_modules/bootstrap/dist/js/bootstrap.min.js";
 import "../../../node_modules/bootstrap/js/dist/tab.js";
-import "../../../node_modules/slick-carousel/slick/slick.min.js";
+import "../../../node_modules/bootstrap/js/dist/carousel.js";
 
-// var sliderButtons = document.querySelectorAll(".header-slider__btn");
-// var slides = document.querySelectorAll(".header-slider__slide");
+$(document).ready( function() {
 
-// const resetMainSlider = () => {
-// 	sliderButtons.forEach(node => {
-// 		node.classList.remove("header-slider__btn_active");
-// 	});
-// 	slides.forEach(node => {
-// 		node.style.display = "none";
-// 	});
-// };
-
-// const addSliderClickHandler = (sliderButton, slide) => {
-// 	sliderButton.addEventListener("click", (e) => {
-// 		e.preventDefault();
-// 		resetMainSlider();
-// 		sliderButton.classList.add("header-slider__btn_active");
-// 		slide.style.display = "block";
-// 	});
-// };
-
-// const showSlide = () => {
-// 	sliderButtons[0].classList.add("header-slider__btn_active");
-// 	slides[0].style.display = "block";
-// 	for (var i = 0; i < sliderButtons.length; i++) {
-// 		addSliderClickHandler(sliderButtons[i], slides[i]);
-// 	}
-// };
-
-// showSlide();
-
-$(document).ready(function(){
-	$(".header-slider .container").slick({
-		autoplay: true,
-		autoplaySpeed: 5000,
-		arrows: false,
-		dots: true,
-		dotsClass: "header-slides"
-	});
+	var clickEvent = false;
+	$("#mainCarousel")
+		.on("click", ".header-slides.nav div", function() {
+			clickEvent = true;
+			$(".nav div").removeClass("header-slider__btn_active");
+			$(this).addClass("header-slider__btn_active");		
+		})
+		.on("slid.bs.carousel", function() {
+			if(!clickEvent) {
+				var count = $(".header-slides.nav").children().length -1;
+				var current = $(".header-slides.nav div.header-slider__btn_active");
+				current.removeClass("header-slider__btn_active").next().addClass("header-slider__btn_active");
+				var id = parseInt(current.data("slideTo"));
+				if(count == id) {
+					$(".header-slides.nav div").first().addClass("header-slider__btn_active");	
+				}
+			}
+			clickEvent = false;
+		});
 });
