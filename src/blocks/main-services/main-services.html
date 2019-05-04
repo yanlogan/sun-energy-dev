@@ -3,43 +3,55 @@
 		<div class="container">
 			<div class="main-services-wrapper">
 				<h2 class="section-title">Наши услуги</h2>
-				<div class="main-services-content">
-					<ul class="main-services-tabs">
-						<li><a href="#" class="main-services__tab">Экспедирование</a></li>
-						<li><a href="#" class="main-services__tab">Сопровождение сделок</a></li>
-						<li><a href="#" class="main-services__tab">Маркетинговые исследования</a></li>
+				<div id="servicesCarousel" class="main-services-content carousel slide" data-ride="carousel">
+					<ul class="main-services-tabs nav">
+						<li data-target="#servicesCarousel" data-slide-to="0" class="nav-item"><a href="#" class="main-services__tab main-services__tab_active">Экспедирование</a></li>
+						<li data-target="#servicesCarousel" data-slide-to="1" class="nav-item"><a href="#" class="main-services__tab ">Сопровождение сделок</a></li>
+						<li data-target="#servicesCarousel" data-slide-to="2" class="nav-item"><a href="#" class="main-services__tab ">Маркетинговые исследования</a></li>
 					</ul>
-					<div class="main-services-tabcontent">
-						<div class="main-services-tabcontent__text">
-							<div>
-								<span>Доставка любых объемов по&nbsp;всей Средней Азии</span>
-								<p>Ньютона, эффективно трансформирует небольшой кетон.<br>3,4-метилендиоксиметамфетамина ожидает уголовное наказание. Полимолекулярный ассоциат реакционен. Необратимое ингибирование колебательно позволяет исключить из&nbsp;рассмотрения.</p>
+					<div class="main-services-content-wrapper carousel-inner">
+						<div class="main-services-tabcontent carousel-item active">
+							<div class="main-services-tabcontent__text">
+								<div>
+									<span>Доставка любых объемов по&nbsp;всей Средней Азии</span>
+									<p>Ньютона, эффективно трансформирует небольшой кетон.<br>3,4-метилендиоксиметамфетамина ожидает уголовное наказание. Полимолекулярный ассоциат реакционен. Необратимое ингибирование колебательно позволяет исключить из&nbsp;рассмотрения.</p>
+								</div>
+								<a href="#">Подробнее</a>
 							</div>
-							<a href="#">Подробнее</a>
+						</div>
+						<div class="main-services-tabcontent carousel-item">
+							<div class="main-services-tabcontent__text">
+								<div>
+									<span>Другая вкладка</span>
+									<p>Ньютона, эффективно трансформирует небольшой кетон.<br>3,4-метилендиоксиметамфетамина ожидает уголовное наказание. Полимолекулярный ассоциат реакционен. Необратимое ингибирование колебательно позволяет исключить из&nbsp;рассмотрения.</p>
+								</div>
+								<a href="#">Подробнее</a>
+							</div>
+						</div>
+						<div class="main-services-tabcontent carousel-item">
+							<div class="main-services-tabcontent__text">
+								<div>
+									<span>Еще одна вкладка</span>
+									<p>Ньютона, эффективно трансформирует небольшой кетон.<br>3,4-метилендиоксиметамфетамина ожидает уголовное наказание. Полимолекулярный ассоциат реакционен. Необратимое ингибирование колебательно позволяет исключить из&nbsp;рассмотрения.</p>
+								</div>
+								<a href="#">Подробнее</a>
+							</div>
 						</div>
 					</div>
-					<div class="main-services-tabcontent">
-						<div class="main-services-tabcontent__text">
-							<div>
-								<span>Другая вкладка</span>
-								<p>Ньютона, эффективно трансформирует небольшой кетон.<br>3,4-метилендиоксиметамфетамина ожидает уголовное наказание. Полимолекулярный ассоциат реакционен. Необратимое ингибирование колебательно позволяет исключить из&nbsp;рассмотрения.</p>
-							</div>
-							<a href="#">Подробнее</a>
-						</div>
-					</div>
-					<div class="main-services-tabcontent">
-						<div class="main-services-tabcontent__text">
-							<div>
-								<span>Еще одна вкладка</span>
-								<p>Ньютона, эффективно трансформирует небольшой кетон.<br>3,4-метилендиоксиметамфетамина ожидает уголовное наказание. Полимолекулярный ассоциат реакционен. Необратимое ингибирование колебательно позволяет исключить из&nbsp;рассмотрения.</p>
-							</div>
-							<a href="#">Подробнее</a>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</div>
-		<div class="main-services-next"></div>
-		<div class="main-services-prev"></div>
+
+		<a class="main-services-prev carousel-control-prev" href="#servicesCarousel" role="button" data-slide="prev"> 
+			<span class="main-services-prev-icon carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+
+		<a class="main-services-next carousel-control-next" href="#servicesCarousel" role="button" data-slide="next">
+			<span class="main-services-next-icon carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+		
 	</div>
 </div>

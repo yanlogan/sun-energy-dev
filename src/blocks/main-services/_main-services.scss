@@ -12,22 +12,22 @@
 	}
 
 	&-prev {
-		display: block;
-		position: absolute;
-		left: 40px;
-		top: 46%;
-		content: url('/img/arrow.png');
-		transform: rotate(180deg);
-		cursor: pointer;
+		width: 8%;
+		&-icon {
+			width: 38px;
+			height: 71px;
+			background-image: url('/img/arrow.png');
+			transform: rotate(180deg);
+		}
 	}
 
 	&-next {
-		display: block;
-		position: absolute;
-		right: 40px;
-		top: 46%;
-		content: url('/img/arrow.png');
-		cursor: pointer;
+		width: 8%;
+		&-icon {
+			width: 38px;
+			height: 71px;
+			background-image: url('/img/arrow.png');
+		}
 	}
 
 	.section-title {
@@ -63,9 +63,19 @@
 		line-height: 32px;
 		border-bottom: 2px dashed $accent-color;
 
+		&:hover {
+			color: #fff;
+			text-decoration: none;
+		}
+
 		&_active {
 			color: rgba(255,255,255, .6);
 			border-bottom: none;
+
+			&:hover {
+				color: rgba(255,255,255, .6);
+				text-decoration: none;
+			}	
 		}
 	}
 
@@ -73,7 +83,7 @@
 		margin-top: 332px;
 		background-color: rgba(20, 20, 20, .7);
 		border-radius: 4px;
-		display: none;
+		// display: none;
 		
 		&__text {
 			display: flex;
