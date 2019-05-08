@@ -87,6 +87,8 @@ const webpackConfig = require("./webpack.config.js"),
 		}
 	};
 
+
+
 webpackConfig.mode = production ? "production" : "development";
 webpackConfig.devtool = production ? false : "cheap-eval-source-map";
 
@@ -209,7 +211,7 @@ export const scripts = () => gulp.src(paths.scripts.src)
 	.pipe(debug({
 		"title": "JS files"
 	}))
-.on("end", browsersync.reload);
+	.on("end", browsersync.reload);
 
 export const images = () => gulp.src(paths.images.src)
 	.pipe(gulpif(production, imagemin([

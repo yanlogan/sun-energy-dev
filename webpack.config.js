@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
 	output: {
@@ -26,5 +27,13 @@ module.exports = {
 		alias: {
 			"%blocks%": path.resolve(__dirname, "src/blocks")
 		}
-	}
+	},
+
+	plugins: [
+		new webpack.ProvidePlugin({
+			$: "jquery",
+			jQuery: "jquery",
+			"window.jQuery": "jquery"
+		}),
+	]
 };
