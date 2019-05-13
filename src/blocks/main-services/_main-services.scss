@@ -61,7 +61,16 @@
 	&__tab {
 		color: #fff;
 		line-height: 32px;
-		border-bottom: 2px dashed $accent-color;
+		border-bottom: 2px dashed $tab-color;
+
+		&:hover {
+			border-bottom: none;
+		}
+
+		&:active {
+			color: rgba(255,255,255, .6);
+			border-bottom: none;
+		}
 
 		&_active {
 			color: rgba(255,255,255, .6);

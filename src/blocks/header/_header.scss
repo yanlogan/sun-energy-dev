@@ -15,11 +15,19 @@
 		a {
 			font-family: 'Rubik Medium';
 			color: #fff;
+
+			&:hover {
+				color: $accent-color;
+			}
+
+			&:active {
+				color: $form-text-color; 
+			}
 		}
 
 		.header-menu__language {
 			&_active {
-				color: #afafaf; 
+				color: $form-text-color; 
 			}
 		}
 	

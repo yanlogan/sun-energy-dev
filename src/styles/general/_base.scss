@@ -1,7 +1,10 @@
 // Colors
-$accent-color: #67bf00;
+$accent-color: #76c900;
 $primary-color: #323232;
 $form-text-color: #afafaf;
+$btn-color: #67bf00;
+$btn-color-dark: #5a9900;
+$tab-color: #66bc00;
 
 body {
 	font-family: 'Rubik Regular', 'Arial', sans-serif;
@@ -51,6 +54,18 @@ a {
 	font-family: 'Rubik Medium';
 	font-size: 16px;
 	color: inherit;
-	border: 2px solid $accent-color;
+	border: 2px solid $btn-color;
 	border-radius: 20px;
+
+	&:hover {
+		color: #fff;
+		background-color: $btn-color;
+		border-color: $btn-color;
+	}
+
+	&:active {
+		color: #fff;
+		background-color: $btn-color-dark;
+		border-color: $btn-color-dark;
+	}
 }

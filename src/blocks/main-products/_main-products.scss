@@ -71,7 +71,16 @@
 	&__tab {
 		color: #66bc00;
 		line-height: 32px;
-		border-bottom: 2px dashed $accent-color;
+		border-bottom: 2px dashed $tab-color;
+
+		&:hover {
+			border-bottom: none;
+		}
+
+		&:active {
+			color: $form-text-color;
+			border-bottom: none;
+		}
 
 		&_active {
 			color: $form-text-color;
@@ -94,6 +103,12 @@
 		-webkit-box-shadow: 0px 10px 24px rgba(7,15,22,0.5);
 		-moz-box-shadow: 0px 10px 24px rgba(7,15,22,0.5);
 		box-shadow: 0px 10px 24px rgba(7,15,22,0.5);
+
+		&:hover {
+			h3 {
+				color: $accent-color;
+			}
+		}
 		// display: none;
 
 		&__img {

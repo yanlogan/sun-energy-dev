@@ -41,13 +41,24 @@
 				color: #fff;
 				font-size: 16px;
 				line-height: 22px;
-				border-bottom: 2px solid $accent-color;
+				border-bottom: 2px solid $btn-color;
+
+				&:hover {
+					color: $accent-color;
+					border-color: transparent;
+				}
+
+				&:active {
+					color: $form-text-color;
+					border-color: transparent;
+				}
 			}
 		}
 
 		.header-slides {
 			display: flex;
 			justify-content: space-between;
+			align-items: flex-end;
 
 			.header-slider__btn {
 				width: 238px;
@@ -55,6 +66,17 @@
 				background-color: #fff;
 				opacity: .7;
 				cursor: pointer;
+				
+
+				&:hover {
+					height: 12px;
+					background-color: $accent-color;
+				}
+
+				&:active {
+					height: 12px;
+					background-color: $btn-color-dark;
+				}
 
 				&_active {
 					background-color: $accent-color;
