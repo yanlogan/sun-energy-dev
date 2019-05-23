@@ -10,7 +10,7 @@ $(document).ready( function() {
 		.on("click", ".header-slides.nav div", function() {
 			clickEvent = true;
 			$(".nav div").removeClass("header-slider__btn_active");
-			$(this).addClass("header-slider__btn_active");		
+			$(this).addClass("header-slider__btn_active");
 		})
 		.on("slid.bs.carousel", function() {
 			if(!clickEvent) {
