@@ -1,10 +1,10 @@
-@import "vendor/normalize";
-@import "vendor/smart-grid";
-
 // Required
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
+
+@import "vendor/normalize";
+@import "vendor/smart-grid";
 
 // Optional
 @import "node_modules/bootstrap/scss/transitions";
@@ -12,5 +12,5 @@
 @import "node_modules/bootstrap/scss/navbar";
 @import "node_modules/bootstrap/scss/carousel";
 
-@import "node_modules/owl.carousel/src/scss/owl.carousel";
-@import "node_modules/owl.carousel/src/scss/owl.theme.default";
+@import "node_modules/slick-carousel/slick/slick.scss";
+@import "node_modules/slick-carousel/slick/slick-theme.scss";

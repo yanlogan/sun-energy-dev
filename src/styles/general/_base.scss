@@ -12,13 +12,13 @@ body {
 	color: $primary-color;
 	width: 100%;
 	height: 100%;
-	// position: fixed;
-	// display: flex;
-	// align-items: center;
-	// justify-content: center;
 }
 
-h1, h2, h3, h4, h5, h6, ul {
+div, p, input, form, button, span, a {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, ul, p {
 	padding: 0;
 	margin: 0;
 }
@@ -29,10 +29,18 @@ a {
 
 .container {
 	@include container();
-	@include sm(max-width, 510px); //510px
-	@include md(max-width, 690px); //690px
-	@include lg(max-width, 930px); //930px
-	@include xl(max-width, 960px); //1110px
+	//@include sm(max-width, 320px); //510px
+	//@include md(max-width, 690px); //690px
+	//@include lg(max-width, 930px); //930px
+	//@include xl(max-width, 960px); //1110px
+}
+
+.row {
+	@include row-flex();
+
+	&-smaller {
+		padding: 0 23px;
+	}
 }
 
 .img-responsive {
@@ -49,7 +57,7 @@ a {
 .btn {
 	display: block;
 	width: 180px;
-	padding: 10px 0px;
+	padding: 9px 0px;
 	text-align: center;
 	font-family: 'Rubik Medium';
 	font-size: 16px;
@@ -68,4 +76,12 @@ a {
 		background-color: $btn-color-dark;
 		border-color: $btn-color-dark;
 	}
+}
+
+.tab-content > .tab-pane {
+	display: block;    /* undo display:none          */
+	height: 0;         /* height:0 is also invisible */ 
+}
+.tab-content > .active {
+	height: auto;      /* let the content decide it  */
 }
