@@ -57,32 +57,39 @@
 			}
 		}
 
-		.header-slides {
+		.slick-dots {
 			display: flex;
 			justify-content: space-between;
 			align-items: flex-end;
-
-			.header-slider__btn {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			// display: block;
+			width: 100%;
+			padding: 0;
+			list-style: none;
+			text-align: center;
+			li {
 				position: relative;
-				width: 238px;
+				width: 237px;
 				height: 4px;
-				background-color: #fff;
-				opacity: .7;
+				margin: 0;
+				background-color: rgba(255,255,255, .7);
 				cursor: pointer;
-
+		
 				&:hover {
 					height: 12px;
 					background-color: $accent-color;
 				}
-
+		
 				&:active {
 					height: 12px;
 					background-color: $btn-color-dark;
 				}
-
-				&_active {
-					opacity: .6;
-
+		
+				&.slick-active {
+					background-color: rgba(255,255,255, .7);
+		
 					&:after {
 						display: block;
 						content: "";
@@ -93,51 +100,15 @@
 						height: inherit;
 						background-color: $accent-color;
 						animation-name: slidertimer;
-						animation-duration: 4.25s;
+						animation-duration: 5s;
 						animation-timing-function: linear;
 					}
 				}
-			}
-			
-		}
-
-		.header-slides {
-			display: flex;
-			justify-content: space-between;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			list-style: none;
-			padding: 0;
-			margin: 0;
-			width: 100%;
-
-			li {
-				position: relative;
-				display: block;
-				width: 238px;
-				height: 4px;
-				background-color: #fff;
-				opacity: .7;
-				padding: 0;
-				cursor: pointer;
-	
-				&.slick-active {
-					background-color: $accent-color;
-				}
-
+		
 				button {
-					border: 0;
-					background: transparent;
-					display: block;
-					width: 238px;
-					height: 4px;
-					outline: none;
-					line-height: 0px;
-					font-size: 0px;
-					color: transparent;
-					cursor: pointer;
+					display: none;
 				}
+				
 			}
 		}
 	}
