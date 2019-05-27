@@ -2,12 +2,24 @@
 	display: flex;
 	justify-content: space-between;
 
-	padding: 0 20px 0 25px;
+	// padding: 0 20px 0 25px;
 	color: #fff;
+
+	.header-logo {
+		@include col();
+		@include size(4);
+		@include size-md(5);
+		@include size-xs(7);
+	}
 	
 	.header-menu {
-		width: 612px;
-		margin-top: 10px;
+		@include col();
+		@include size(8);
+		@include size-md(7);
+		@include xs(display, none);
+
+		// width: 612px;
+		margin-top: 8px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -31,9 +43,11 @@
 			}
 		}
 	
-		&__btn {
+		.btn {
+			@include md(display, none);
+
 			.icon-envelope {
-				margin-right: 8px;
+				margin-right: 3px;
 				
 				path {
 					fill: white;

@@ -1,0 +1,95 @@
+.modal {
+	display: none;
+	background: rgba(0,0,0,.8);
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 30;
+
+	&-content {
+		position: relative;
+		background: #fff;
+		width: 100%;
+		max-width: 600px;
+		margin: auto;
+		margin-top: calc(50vh - 230px);
+		border-radius: 4px;
+		-webkit-box-shadow: 0px 10px 24px rgba(0,0,0,0.5);
+		-moz-box-shadow: 0px 10px 24px rgba(0,0,0,0.5);
+		box-shadow: 0px 10px 24px rgba(0,0,0,0.5);
+	}
+
+	&-close {
+		position: absolute;
+		top: -45px;
+		right: 0;
+		cursor: pointer;
+	}
+
+	&-form {
+
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 40px 40px 45px;
+
+			.form-content {
+				padding-left: 10px;
+				margin-top: 40px;
+				margin-bottom: 30px;
+				display: flex;
+				flex-flow: row wrap;
+			}
+
+			input, textarea {
+				width: 100%;
+				display: block;
+				box-sizing: border-box;
+				margin-top: 8px;
+				padding: 10px 20px;
+				border-radius: 4px;
+				border: 1px solid #dadada;
+				outline: none;
+
+				&:focus {
+					outline: 1px solid $accent-color;
+				}
+			}
+
+			input {
+				margin-bottom: 30px;
+			}
+
+			textarea {
+				height: 80px;
+				resize: none;
+			}
+		}
+
+		&__title {
+			font-family: 'Rubik Bold';
+			font-size: 24px;
+		}
+
+		&__name {
+			width: 200px;
+			margin-right: 30px;
+		}
+
+		&__email {
+			width: 280px;
+		}
+
+		&__question {
+			width: 100%;
+		}
+
+		&__btn {
+			background: none;
+			outline: none;
+		}
+	}
+}

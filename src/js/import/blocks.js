@@ -4,3 +4,4 @@ import "%blocks%/footer/footer.js";
 import "%blocks%/main/main.js";
 import "%blocks%/main-services/main-services.js";
 import "%blocks%/main-products/main-products.js";
+import "%blocks%/modal/modal.js";
