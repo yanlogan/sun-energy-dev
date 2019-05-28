@@ -62,15 +62,12 @@ textarea {
 }
 
 .container {
-	@include container();
-	//@include sm(max-width, 320px); //510px
-	//@include md(max-width, 690px); //690px
-	//@include lg(max-width, 930px); //930px
-	//@include xl(max-width, 960px); //1110px
+	width: 95%;
+	max-width: 960px;
+	margin: 0 auto;
 }
 
 .row {
-	@include row-flex();
 
 	&-smaller {
 		padding: 0 23px;

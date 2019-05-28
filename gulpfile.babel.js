@@ -31,7 +31,6 @@ import yargs from "yargs";
 const webpackConfig = require("./webpack.config.js"),
 	argv = yargs.argv,
 	production = !!argv.production,
-	smartgrid = require("smart-grid"),
 
 	paths = {
 		views: {
@@ -117,40 +116,6 @@ export const serverConfig = () => gulp.src(paths.server_config.src)
 	.pipe(debug({
 		"title": "Server config"
 	}));
-
-export const smartGrid = cb => {
-	smartgrid("./src/styles/vendor", {
-		outputStyle: "scss",
-		filename: "_smart-grid",
-		columns: 12, // number of grid columns
-		offset: "30px", // gutter width
-		mobileFirst: true,
-		mixinNames: {
-			container: "container"
-		},
-		container: {
-			fields: "15px" // side fields
-		},
-		breakPoints: {
-			xs: {
-				width: "320px"
-			},
-			sm: {
-				width: "576px"
-			},
-			md: {
-				width: "768px"
-			},
-			lg: {
-				width: "992px"
-			},
-			xl: {
-				width: "1200px"
-			}
-		}
-	});
-	cb();
-};
 
 export const views = () => gulp.src(paths.views.src)
 	.pipe(rigger())
@@ -286,10 +251,10 @@ export const favs = () => gulp.src(paths.favicons.src)
 		"title": "Favicons"
 	}));
 
-export const development = gulp.series(cleanFiles, smartGrid,
+export const development = gulp.series(cleanFiles,
 	gulp.parallel(views, styles, scripts, images, webpimages, fonts, favs),
 	gulp.parallel(server));
 
-export const prod = gulp.series(cleanFiles, smartGrid, serverConfig, views, styles, scripts, images, webpimages, fonts, favs);
+export const prod = gulp.series(cleanFiles, serverConfig, views, styles, scripts, images, webpimages, fonts, favs);
 
 export default development;

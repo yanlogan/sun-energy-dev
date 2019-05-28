@@ -9,9 +9,6 @@
 	}
 
 	&-slider {
-		@include col();
-		@include size(12);
-
 		margin-top: 504px;
 		background-color: rgba(20, 20, 20, .8);
 
