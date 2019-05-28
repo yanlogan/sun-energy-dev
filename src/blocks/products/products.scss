@@ -1,0 +1,144 @@
+.products {
+	position: relative;
+	background: #fff url('/img/products-bg.png') no-repeat 0 0;
+	background-size: cover;
+	overflow: hidden;
+
+	&-bg {
+		padding: 40px 0 47px;
+		width: 100%;
+
+		&:before {
+			display: block;
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 120px;
+			height: 100%;
+			background-image: linear-gradient(to right, rgba(251, 251, 251, 0.8) 0%, rgba(252, 252, 252, 0) 100%);
+			z-index: 10;
+		}
+	
+		&:after {
+			display: block;
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 120px;
+			height: 100%;
+			background-image: linear-gradient(to left, rgba(251, 251, 251, 0.8) 0%, rgba(252, 252, 252, 0) 100%);
+			z-index: 10;
+		}
+	}
+
+
+	.section-title {
+		text-align: center;
+		background-image: linear-gradient(to top, #5eae00 0%, #76dc00 100%);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+	}
+
+	&-content {
+		margin-top: 15px;
+	}
+
+	&-tabs {
+		display: flex;
+		justify-content: center;
+
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		font-size: 18px;
+		line-height: 32px;
+
+		li {
+			margin-right: 41px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__tab {
+		color: $primary-color;
+		line-height: 32px;
+		border-bottom: 2px dashed $btn-color;
+
+		&:hover {
+			border-bottom: none;
+		}
+
+		&:active {
+			color: $form-text-color;
+			border-bottom: none;
+		}
+
+		&_active {
+			color: $form-text-color;
+			border-bottom: none;
+		}
+	}
+
+	&-content-wrapper {
+		// width: calc(100% + 30px);
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 38px 0;
+	}
+
+	
+	&-card {
+		width: 300px;
+		background-color: #fff;
+		border-radius: 4px;
+		-webkit-box-shadow: 0px 10px 24px rgba(7,15,22,0.5);
+		-moz-box-shadow: 0px 10px 24px rgba(7,15,22,0.5);
+		box-shadow: 0px 10px 24px rgba(7,15,22,0.5);
+
+		&:hover {
+			h3 {
+				color: $accent-color;
+			}
+		}
+
+		&__img {
+			width: 100%;
+			height: 200px;
+
+			img {
+				width: 100%;
+			}
+		}
+		
+		&__text {
+			padding: 23px;
+
+			h3 {
+				font-family: 'Rubik Bold';
+				font-size: 24px;
+				line-height: 30px;
+			}
+
+			p {
+				line-height: 26px;
+				margin: 15px 0;
+			}
+
+			small {
+				font-size: 14px;
+				line-height: 20px;
+				color: #b1b1b1;
+			}
+		}
+
+	}
+
+}
