@@ -1,0 +1,83 @@
+.services {
+	position: relative;
+	overflow: hidden;
+
+	&-bg {
+		padding: 40px 0 47px;
+		width: 100%;
+	}
+
+	.section-title {
+		text-align: center;
+		background-image: linear-gradient(to top, #5eae00 0%, #76dc00 100%);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+	}
+
+	&-content {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding-top: 38px;
+		margin-top: 15px;
+	}
+	
+	&-card {
+		display: flex;
+		width: 100%;
+		margin-bottom: 48px;
+		background-color: #fff;
+		border-radius: 4px;
+		-webkit-box-shadow: 0px 10px 24px rgba(7,15,22,0.2);
+		-moz-box-shadow: 0px 10px 24px rgba(7,15,22,0.2);
+		box-shadow: 0px 10px 24px rgba(7,15,22,0.2);
+
+		&:last-child {
+			margin: 0;
+		}
+
+		&:hover {
+			h3 {
+				color: $accent-color;
+			}
+		}
+
+		&__img {
+			flex: 0 0 auto;
+			width: 405px;
+			height: 405px;
+
+			img {
+				width: 100%;
+			}
+		}
+		
+		&__text {
+			padding: 23px;
+
+			h3 {
+				font-family: 'Rubik Bold';
+				font-size: 24px;
+				line-height: 30px;
+			}
+
+			span {
+				display: block;
+				font-family: 'Rubik Medium';
+				font-size: 18px;
+				line-height: 28px;
+				margin: 18px 0;
+			}
+
+			p {
+				line-height: 26px;
+				margin: 15px 0;
+			}
+
+		}
+
+	}
+
+}
