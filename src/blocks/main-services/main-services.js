@@ -1,28 +1,42 @@
 import "../../../node_modules/jquery/dist/jquery.min.js";
 import $ from "jquery";
-import "../../../node_modules/bootstrap/js/dist/tab.js";
-import "../../../node_modules/bootstrap/js/dist/carousel.js";
-
+import "../../../node_modules/slick-carousel/slick/slick.min.js";
 
 $(document).ready( function() {
 
-	var clickEvent = false;
-	$("#servicesCarousel")
-		.on("click", ".main-services-tabs.nav a", function() {
-			clickEvent = true;
-			$(".nav a").removeClass("main-services__tab_active");
-			$(this).addClass("main-services__tab_active");		
-		})
-		.on("slid.bs.carousel", function() {
-			if(!clickEvent) {
-				var count = $(".main-services-tabs.nav").children().length -1;
-				var current = $(".main-services-tabs.nav a.main-services__tab_active");
-				current.removeClass("main-services__tab_active").parent().next().children().addClass("main-services__tab_active");
-				var id = parseInt(current.parent().data("slideTo"));
-				if(count == id) {
-					$(".main-services-tabs.nav a").first().addClass("main-services__tab_active");	
-				}
-			}
-			clickEvent = false;
-		});
+	const slider = $(".main-services-content-wrapper");
+	slider.slick({
+		autoplay: false,
+		infinite: false,
+		appendArrows: false,
+	}).on("afterChange", function(event, slick, currentSlide) {
+		$(".main-services__tab").removeClass("main-services__tab_active");
+		$(`a[data-slide=${currentSlide}]`).addClass("main-services__tab_active");
+		if(currentSlide === 0) {
+			slider.siblings(".main-services-prev").hide();
+		}
+		else {
+			slider.siblings(".main-services-prev").show();
+		}
+		if(currentSlide === slick.slideCount - 1) {
+			slider.siblings(".main-services-next").hide();
+		}
+		else {
+			slider.siblings(".main-services-next").show();
+		}   
+	});
+	$("a[data-slide]").click(function(e) {
+		$(".main-services__tab").removeClass("main-services__tab_active");
+		$(this).addClass("main-services__tab_active");
+		e.preventDefault();
+		var slideId = $(this).data("slide");
+		slider.slick("slickGoTo", slideId);
+	});
+	slider.siblings(".main-services-prev").hide();
+	slider.siblings(".main-services-prev").click(() => {
+		slider.slick("slickPrev");
+	});
+	slider.siblings(".main-services-next").click(() => {
+		slider.slick("slickNext");
+	});
 });

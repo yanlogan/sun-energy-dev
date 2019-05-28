@@ -33,6 +33,10 @@ a {
 	text-decoration: none;
 }
 
+*:focus, *:active {
+	outline: none;
+}
+
 .container {
 	@include container();
 	//@include sm(max-width, 320px); //510px
