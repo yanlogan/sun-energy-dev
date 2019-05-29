@@ -62,15 +62,13 @@ textarea {
 }
 
 .container {
-	width: 95%;
-	max-width: 960px;
+	width: 100%;
+	max-width: 992px;
 	margin: 0 auto;
-}
-
-.row {
+	padding: 0 16px;
 
 	&-smaller {
-		padding: 0 23px;
+		// padding: 0 23px;
 	}
 }
 
