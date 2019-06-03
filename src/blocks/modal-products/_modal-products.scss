@@ -1,0 +1,137 @@
+.modal-products {
+	display: none;
+	background: rgba(0,0,0,.8);
+	position: fixed;
+	left: 0;
+	top: 0;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	width: 100%;
+	height: 100%;
+	z-index: 30;
+
+	&-content {
+		position: relative;
+		width: 100%;
+		max-width: 995px;
+		margin: auto;
+		margin-top: calc(50vh - 110px);		
+
+		@media (max-width: 992px) {
+			max-width: 740px;
+			margin-top: calc(50vh - 300px);
+		}
+
+	}
+
+	&__card {
+		display: flex;
+		overflow: hidden;
+		background: #fff;
+		border-radius: 4px;
+		-webkit-box-shadow: 0px 7px 14px rgba(7,15,22,0.3);
+		-moz-box-shadow: 0px 7px 14px rgba(7,15,22,0.3);
+		box-shadow: 0px 7px 14px rgba(7,15,22,0.3);
+
+		@media (max-width: 992px) {
+			flex-direction: column;
+		}
+	}
+
+	&__img {
+		flex: 0 0 auto;
+		width: 405px;
+		height: 405px;
+
+		@media (max-width: 992px) {
+			width: 100%;
+			height: 300px;
+			overflow: hidden;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 30px 35px;
+
+		h3 {
+			font-family: 'Rubik Bold';
+			font-size: 24px;
+			line-height: 30px;
+		}
+
+		p {
+			line-height: 26px;
+			margin: 15px 0;
+		}
+
+		small {
+			font-size: 14px;
+			line-height: 20px;
+			color: #b1b1b1;
+		}
+	}
+
+	&-close {
+		position: absolute;
+		top: -45px;
+		right: 0;
+		cursor: pointer;
+
+		@media (max-width: 640px) {
+			display: none;
+		}
+
+		path { opacity: .5; }
+		&:hover {
+			path {
+				fill: $accent-color;
+				opacity: 1;
+			}
+		}
+		&:active {
+			path {
+				fill: $btn-color-dark;
+				opacity: 1;
+			}
+		}
+
+		&-mob {
+			display: none;
+
+			@media (max-width: 640px) {
+				display: block;
+				position: absolute;
+				top: 18px;
+				right: 18px;
+
+				path {
+					fill: #fff;
+					-webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.74);
+					-moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.74);
+					box-shadow: 0 0 6px rgba(0, 0, 0, 0.74);
+				}
+				&:hover {
+					path {
+						fill: $accent-color;
+						opacity: 1;
+					}
+				}
+				&:active {
+					path {
+						fill: $btn-color-dark;
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+
+}
