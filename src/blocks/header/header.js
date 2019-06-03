@@ -5,4 +5,7 @@ $(document).ready(function() {
 	$(".header-menu__btn").on("click", function() {
 		$(".modal").show();
 	});
+	$(".header-menu-mob-close").on("click", function() {
+		$(".header-menu-mob").hide();
+	});
 });

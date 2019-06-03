@@ -1,19 +1,42 @@
 .header-top {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	padding: 0 20px 0 25px;
 	color: #fff;
+
+	@media (max-width: 740px) {
+		padding: 0;
+	}
+
+	.header-logo {
+		@media (max-width: 576px) {
+			width: 170px;
+		}
+	}
+
+	.header-burger {
+		display: none;
+
+		@media (max-width: 740px) {
+			display: block;
+		}
+	}
 	
 	.header-menu {
-		width: 612px;
 		margin-top: 8px;
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-end;
 		align-items: center;
+
+		@media (max-width: 740px) {
+			display: none;
+		}
 	
 		a {
 			font-family: 'Rubik Medium';
 			color: #fff;
+			margin-left: 35px;
 
 			&:hover {
 				color: $accent-color;
@@ -24,18 +47,111 @@
 			}
 		}
 
-		.header-menu__language {
-			&_active {
-				color: $form-text-color; 
+		span {
+			.header-menu__language {
+				margin: 0;
+
+				&_active {
+					color: $form-text-color; 
+				}
 			}
 		}
+
 	
 		.btn {
+			margin-left: 35px;
+
 			.icon-envelope {
 				margin-right: 3px;
 				
 				path {
 					fill: white;
+				}
+			}
+
+			@media (max-width: 960px) {
+				display: none;
+			}
+		}
+
+		&-mob {
+			position: relative;
+			display: none;
+			background: $primary-color;
+			position: fixed;
+			left: 0;
+			top: 0;
+			overflow-y:scroll;
+			overflow-x:hidden;
+			width: 100%;
+			height: 530px;
+			padding-top: 22px;
+			text-align: center;
+			z-index: 30;
+			
+
+			.section-title {
+				color: $form-text-color;
+				margin-bottom: 70px;
+			}
+
+			a {
+				display: block;
+				font-size: 24px;
+				font-family: 'Rubik Medium';
+				line-height: 40px;
+				color: #fff;
+				margin-bottom: 38px;
+	
+				&:hover {
+					color: $accent-color;
+				}
+	
+				&:active {
+					color: $form-text-color; 
+				}
+			}
+	
+			span {
+				display: block;
+				margin-bottom: 38px;
+
+				a {
+					display: inline-block;
+				}
+
+				.header-menu__language {
+					margin: 0;
+	
+					&_active {
+						color: $form-text-color; 
+					}
+				}
+			}
+
+			&-close {
+				display: block;
+				position: absolute;
+				top: 30px;
+				right: 18px;
+
+				path {
+					fill: #fff;
+					-webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.74);
+					-moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.74);
+					box-shadow: 0 0 6px rgba(0, 0, 0, 0.74);
+				}
+				&:hover {
+					path {
+						fill: $accent-color;
+						opacity: 1;
+					}
+				}
+				&:active {
+					path {
+						fill: $btn-color-dark;
+						opacity: 1;
+					}
 				}
 			}
 		}
