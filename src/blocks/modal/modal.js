@@ -5,4 +5,7 @@ $(document).ready(function() {
 	$(".modal-close").on("click", function() {
 		$(".modal").hide();
 	});
+	$(".modal-close-mob").on("click", function() {
+		$(".modal").hide();
+	});
 });
