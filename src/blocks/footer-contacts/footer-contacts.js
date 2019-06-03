@@ -1,13 +1,9 @@
-modules.define('footer-contacts', ['i-bem-dom'], function(provide, bemDom) {
+import "../../../node_modules/jquery/dist/jquery.min.js";
+import * as $ from "jquery";
 
-provide(bemDom.declBlock(this.name, {
-    onSetMod: {
-        js: {
-            inited: function() {
-                
-            }
-        }
-    }
-}));
-
+$(document).ready(function() {
+	$(".contacts-form").on("submit", e => {
+		$(".modal-contacts").show();
+		e.preventDefault();
+	});
 });
