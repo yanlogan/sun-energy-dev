@@ -8,4 +8,7 @@ $(document).ready(function() {
 		$(".nav a").removeClass("products__tab_active");
 		$(this).addClass("products__tab_active");	
 	});
+	$(".products-card__text h3").on("click", function() {
+		$(".modal-products").show();
+	});
 });
