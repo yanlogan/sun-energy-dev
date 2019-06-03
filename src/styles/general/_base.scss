@@ -64,6 +64,7 @@ textarea {
 .container {
 	width: 100%;
 	max-width: 992px;
+	min-width: 320px;
 	margin: 0 auto;
 	padding: 0 16px;
 
@@ -81,6 +82,10 @@ textarea {
 .section-title {
 	font-family: 'Rubik Bold';
 	font-size: 40px;
+
+	@media (max-width: 576px) {
+		font-size: 32px;
+	}
 }
 
 .btn {
@@ -106,6 +111,10 @@ textarea {
 		background-color: $btn-color-dark;
 		border-color: $btn-color-dark;
 	}
+}
+
+.slick-slider {
+	margin-bottom: 0 !important;
 }
 
 .tab-content > .tab-pane {
