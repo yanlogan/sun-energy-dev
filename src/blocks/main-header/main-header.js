@@ -5,6 +5,15 @@ import "../../../node_modules/slick-carousel/slick/slick.min.js";
 
 $(document).ready( function() {
 
+	$(".header-slider-bg").slick({
+		infinite: true,
+		autoplay: false,
+		pauseOnHover: false,
+		// autoplaySpeed: 5000,
+		appendArrows: false,
+		dots: false,
+	});
+
 	$(".header-slider").slick({
 		infinite: true,
 		autoplay: true,
@@ -12,6 +21,7 @@ $(document).ready( function() {
 		autoplaySpeed: 5000,
 		appendArrows: false,
 		dots: true,
+		asNavFor: ".header-slider-bg"
 	});
 
 });

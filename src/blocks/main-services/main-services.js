@@ -5,11 +5,18 @@ import "../../../node_modules/slick-carousel/slick/slick.min.js";
 
 $(document).ready( function() {
 
+	$(".main-services-slider-bg").slick({
+		infinite: false,
+		autoplay: false,
+		appendArrows: false,
+		dots: false,
+	});
 	const slider = $(".main-services-content-wrapper");
 	slider.slick({
 		autoplay: false,
 		infinite: false,
 		appendArrows: slider.parent(),
+		asNavFor: ".main-services-slider-bg",
 		prevArrow: `<span class="main-services-prev"><svg class="main-services-prev-icon" xmlns="http://www.w3.org/2000/svg" width="38" height="71" viewBox="0 0 38 71"><g><g><path fill="#fff" d="M.015 68.17l2.815 2.842L38.01 35.5 2.83-.012.015 2.83 32.382 35.5z"/></g></g></svg></span>`,
 		nextArrow: `<span class="main-services-next"><svg class="main-services-next-icon" xmlns="http://www.w3.org/2000/svg" width="38" height="71" viewBox="0 0 38 71"><g><g><path fill="#fff" d="M.015 68.17l2.815 2.842L38.01 35.5 2.83-.012.015 2.83 32.382 35.5z"/></g></g></svg></span>`,
 		responsive: [{
