@@ -91,6 +91,7 @@
 	
 	&-card {
 		width: 300px;
+		height: 470px;
 		margin-right: 30px;
 		margin-bottom: 48px;
 		background-color: #fff;
@@ -116,6 +117,9 @@
 		}
 		
 		&__text {
+			display: flex;
+			flex-flow: row wrap;
+			height: 270px;
 			padding: 23px;
 
 			h3 {
@@ -131,6 +135,7 @@
 			}
 
 			small {
+				align-self: flex-end;
 				font-size: 14px;
 				line-height: 20px;
 				color: #b1b1b1;

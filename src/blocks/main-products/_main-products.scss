@@ -157,20 +157,26 @@
 
 		&__img {
 			width: 100%;
-			min-height: 200px;
+			height: 200px;
+			overflow: hidden;
 
 			img {
 				width: 100%;
+				height: auto;
 			}
 		}
 		
 		&__text {
+			display: flex;
+			flex-flow: row wrap;
+			height: 270px;
 			padding: 23px;
 
 			h3 {
 				font-family: 'Rubik Bold';
 				font-size: 24px;
 				line-height: 30px;
+				cursor: pointer;
 			}
 
 			p {
@@ -188,6 +194,7 @@
 	}
 
 	&__btn {
+		position: relative;
 		margin: 0 auto;
 	}
 

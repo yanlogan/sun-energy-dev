@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 	$(".slider").each(function() {
 		const slider = $(this);
-		var fired = false;
+		// var fired = false;
 		slider.slick({
 			infinite: false,
 			autoplay: false,
@@ -71,12 +71,14 @@ $(document).ready(function() {
 		slider.siblings(".main-products-prev").hide();
 		$(".main-products-tabs").on("show.bs.tab", () => {
 			slider.slick("slickGoTo", 0);
-			fired = false;
+			// fired = false;
 		});
 	});
 	$(".slick-dots li:last-child").addClass("smaller-dot");
 	$(".main-products-content").on("click", ".main-products-tabs.nav a", function() {
 		$(".nav a").removeClass("main-products__tab_active");
 		$(this).addClass("main-products__tab_active");	
+	}).on("click", ".main-products-card__text h3", function() {
+		$(".modal-products").show();	
 	});
 });

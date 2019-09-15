@@ -19,7 +19,7 @@
 		"babel-loader": "^8.0.5",
 		"bem-tools-core": "bem-tools/bem-tools-core",
 		"bem-tools-create": "bem-tools/bem-tools-create",
-		"browser-sync": "^2.23.6",
+		"browser-sync": "^2.26.7",
 		"css-mqpacker": "^7.0.0",
 		"gulp": "^4.0.0",
 		"gulp-autoprefixer": "^5.0.0",
@@ -53,9 +53,7 @@
 		"bootstrap": "^4.3.1",
 		"eslint": "^5.16.0",
 		"jquery": "^3.4.1",
-		"owl.carousel": "^2.3.4",
 		"popper.js": "^1.15.0",
-		"slick-carousel": "^1.8.1",
-		"smart-grid": "^2.1.2"
+		"slick-carousel": "^1.8.1"
 	}
 }

@@ -33,10 +33,22 @@
 			display: none;
 		}
 	
+		ul {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li {
+				margin-left: 35px;
+			}
+
+		}
+
 		a {
 			font-family: 'Rubik Medium';
 			color: #fff;
-			margin-left: 35px;
 
 			&:hover {
 				color: $accent-color;
@@ -95,13 +107,22 @@
 				margin-bottom: 70px;
 			}
 
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				
+				li {
+					margin-bottom: 38px;
+				}
+			}
+
 			a {
 				display: block;
 				font-size: 24px;
 				font-family: 'Rubik Medium';
 				line-height: 40px;
 				color: #fff;
-				margin-bottom: 38px;
 	
 				&:hover {
 					color: $accent-color;

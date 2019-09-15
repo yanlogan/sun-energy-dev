@@ -10,16 +10,18 @@
 	}
 
 	&-content {
-		// display: flex;
-		// justify-content: space-between;
-		// align-items: center;
-
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		margin-right: -15px;
 		margin-top: 46px;
 	}
 
 	&__img {
-		width: 100%;
-		min-height: 115px;
-		background: #fff url('/img/partners.png') no-repeat 10px 0;
+		margin-right: 15px;
+		// width: 100%;
+		// min-height: 115px;
+		// background: #fff url('/img/partners.png') no-repeat 10px 0;
 	}
 }

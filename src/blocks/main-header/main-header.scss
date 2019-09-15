@@ -1,4 +1,4 @@
-.header {
+ga.header {
 	background: #fff url('/img/header-slider/slider-bg.jpg') no-repeat 0 0;
 	background-size: cover;
 
@@ -114,7 +114,7 @@
 						position: absolute;
 						top: 0;
 						left: 0;
-						width: inherit;
+						width: 100%;
 						height: inherit;
 						background-color: $btn-color;
 						animation-name: slidertimer;
@@ -138,6 +138,6 @@
 	}
 
 	to {
-		width: inherit;
+		width: 100%;
 	}
 }

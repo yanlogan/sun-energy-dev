@@ -3,7 +3,8 @@ const webpack = require("webpack");
 
 module.exports = {
 	output: {
-		filename: "[name].js"
+		filename: "[name].js",
+		
 	},
 
 	module: {

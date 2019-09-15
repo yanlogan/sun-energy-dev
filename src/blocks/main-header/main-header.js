@@ -8,6 +8,7 @@ $(document).ready( function() {
 	$(".header-slider").slick({
 		infinite: true,
 		autoplay: true,
+		pauseOnHover: false,
 		autoplaySpeed: 5000,
 		appendArrows: false,
 		dots: true,
